@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Sert les fichiers du dossier "public" (HTML, CSS, JS du joueur)
-app.use(express.static(path.join(__dirname, 'public')));
+// Remplace 'public' par 'publique'
+app.use(express.static(path.join(__dirname, 'publique')));
 
 // Exemple de route dynamique : Sauvegarde des scores en mémoire (temporaire)
 let scoresGlobaux = { victoiresX: 0, victoiresO: 0 };
